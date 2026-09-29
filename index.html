@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Memory Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>🧠 Memory Game</h1>
+            <p>Find all matching pairs!</p>
+        </div>
+
+
+        <!-- Game Info -->
+        <div class="game-info">
+
+            <div class="info-box">
+                <span>Moves</span>
+                <strong id="moves">0</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Score</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Time</span>
+                <strong id="time">00:00</strong>
+            </div>
+
+        </div>
+
+
+        <!-- Game Board -->
+        <div class="game-board" id="gameBoard">
+        </div>
+
+
+        <!-- Restart Button -->
+        <button class="restart-btn" id="restartBtn">
+            🔄 Restart Game
+        </button>
+
+
+        <!-- Win Message -->
+        <div class="message" id="message"></div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

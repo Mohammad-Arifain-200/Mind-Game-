@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/* =========================
+   Reset
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   Body
+========================= */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+}
+
+
+/* =========================
+   Main Container
+========================= */
+
+.game-container {
+    width: 100%;
+    max-width: 520px;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.header {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+
+.header h1 {
+    font-size: 32px;
+
+    color: #222;
+}
+
+
+.header p {
+    margin-top: 5px;
+
+    font-size: 14px;
+
+    color: #777;
+}
+
+
+/* =========================
+   Game Information
+========================= */
+
+.game-info {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+.info-box {
+    padding: 12px;
+
+    text-align: center;
+
+    background: #f4f4ff;
+
+    border-radius: 15px;
+}
+
+
+.info-box span {
+    display: block;
+
+    font-size: 12px;
+
+    color: #777;
+}
+
+
+.info-box strong {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 20px;
+
+    color: #5b5ce2;
+}
+
+
+/* =========================
+   Game Board
+========================= */
+
+.game-board {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   Card
+========================= */
+
+.card {
+    height: 90px;
+
+    border: none;
+
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    color: white;
+
+    font-size: 32px;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+
+    transition: 0.25s;
+}
+
+
+.card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Open Card */
+
+.card.open {
+    background: white;
+
+    border: 3px solid #667eea;
+
+    transform: rotateY(180deg);
+}
+
+
+/* Matched Card */
+
+.card.matched {
+    background: linear-gradient(
+        135deg,
+        #43cea2,
+        #185a9d
+    );
+
+    cursor: default;
+}
+
+
+/* =========================
+   Restart Button
+========================= */
+
+.restart-btn {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.restart-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 15px rgba(102, 126, 234, 0.35);
+}
+
+
+/* =========================
+   Win Message
+========================= */
+
+.message {
+    margin-top: 20px;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #43a047;
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 500px) {
+
+    .game-container {
+        padding: 20px;
+    }
+
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+
+    .game-board {
+        gap: 8px;
+    }
+
+
+    .card {
+        height: 70px;
+
+        font-size: 25px;
+    }
+
+}
